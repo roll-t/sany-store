@@ -1,0 +1,788 @@
+
+/* ################## HEADLINE CSS ############## */
+/* .headline{
+} */
+.contact{
+    padding-block:10px;
+    background: var(--color-1);
+    padding-inline:3%;
+    display:flex;
+    justify-content: space-between;
+}
+.contact .left-contact{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.contact .left-contact .call{
+    display: flex;
+    gap:10px ;
+    color:white;
+}
+.contact .left-contact .call .number-phone{
+    padding-bottom:2px;
+    border-bottom:.2px solid rgba(255, 255, 255, 0.32);
+}
+.contact .list-icon{
+    gap:10px;
+    display: flex;
+    color:black;
+}
+.contact .list-icon a{
+    color:white;
+}
+/* ################## SITE HEADER CSS ############## */
+.site-header{
+    padding-block:25px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-inline:3%;
+}
+.site-header .menu{
+    padding-block:10px;
+    display: flex;
+    gap:20px;
+}
+.site-header .menu .menu-item ion-icon{
+    font-size: 10px;
+    color:var(--text-color-2);
+}
+.site-header .menu .menu-item{
+    text-transform: uppercase;
+    display: flex;
+    align-items:center;
+    gap:5px;
+}
+.site-header .menu .menu-item a{
+    font-size: 15px;
+    color:var(--text-color-2);
+}
+.site-header .logo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.site-header .logo img{
+    width: 100px ;
+}
+.site-header .action{
+    display: flex;
+    gap:20px;
+}
+.site-header .action .action-item{
+    display: flex;
+    align-items:center;
+}
+.site-header .action ion-icon{
+    font-size: 25px;
+}
+
+.header .banner{
+    position: relative;
+    height:600px;
+    overflow: hidden;
+    display: flex;
+    background: var(--bg-banner);
+}
+.header .banner .banner-item{
+    flex:1;
+}
+
+.header .banner .left-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+.header .banner .left-banner .content{
+    padding-left:20%;
+}
+.header .banner .left-banner .des{
+    color:var(--text-color-2);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.header .banner .left-banner .title{
+    padding-block:25px;
+    font-size: 60px;
+    width :60%;
+    text-transform:capitalize;
+}
+.header .banner .left-banner .btn{
+    cursor: pointer;
+    padding:10px 60px;
+    background: var(--color-1);
+    border:none;
+    color:white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing:5px;
+    text-transform: uppercase;
+}
+
+.header .banner .right-banner .slide{
+    padding-left:10%;
+    padding-top:50px;
+}
+.header .banner .right-banner .slide img{
+    width: 65%;
+}
+.header .banner .controller{
+    position: absolute;
+}
+.banner .controller.ctrl-1{
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.banner .controller.ctrl-1 ion-icon{
+    cursor: pointer;
+    font-size: 60px;
+    color:var(--text-color-2);
+    opacity: .5;
+}
+.banner .controller.ctrl-2{
+    left:50%;
+    bottom:1%;
+    display: flex;
+    gap:20px;
+    transform: translateX(-50%);
+}
+.banner .controller.ctrl-2 input{
+    cursor: pointer;
+    width:18px;
+    height: 18px;
+}
+
+/* ############# BODY-1 CSS ################ */
+
+.body-1 {
+    padding-right:8%;
+    margin-top: 120px;
+    display:grid;
+    grid-template-columns: 5fr 6fr;
+    grid-column-gap:3%;
+}
+.body-1 .left-body {
+    position: relative;
+    overflow: hidden;
+}
+.body-1 .left-body .banner{
+    position: absolute;
+}
+.body-1 .list-product{
+    display:grid ;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.body-1 .list-product .product-item .top-product{
+    position:relative;
+    cursor: pointer;
+}
+.body-1 .list-product .product-item .top-product:hover .img-zoom{
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.body-1 .list-product .product-item .top-product .img-zoom{
+    position:absolute;
+    top:0;
+    left:0;
+    transform: scale(.9);
+    z-index: 10;
+    filter: blur(10px);
+    opacity: 0;
+
+}
+.body-1 .list-product .product-item .top-product .sale{
+    position: absolute;
+    top:5%;
+    left:0;
+    z-index: 10;
+    font-size: 13px;
+    padding:5px 10px;
+    background:var(--sale);
+    color:white;
+}
+.body-1 .list-product .product-item .top-product .like{
+    position: absolute;
+    top:5%;
+    right:7%;
+    z-index: 10;
+}
+.body-1 .list-product .product-item .top-product .like ion-icon{
+    font-size: 25px;
+    color:var(--text-color-2);
+}
+.body-1 .list-product .product-item .top-product .like:hover ion-icon{
+    animation: .7s scale-heart infinite;
+}
+@keyframes scale-heart {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.body-1 .list-product .product-item .top-product .img{
+    transition: .4s;
+}
+.body-1 .list-product .product-item .name-product{
+    text-transform:capitalize;
+    padding-block:10px;
+}
+.body-1 .list-product .product-item .des-product{
+    display:flex;
+    justify-content: space-between;
+}
+
+.body-1 .list-product .product-item .des-product .list-color-product{
+    display: flex;
+    gap:10px;
+}
+.body-1 .list-product .product-item .list-color-product .color-item{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 100rem;
+    background: red;
+    cursor: pointer;
+}
+.body-1 .list-product .product-item .list-color-product .color-item:hover .des_tag{
+    opacity: 1;
+    bottom:calc(100% + 10px);
+}
+.body-1 .list-product .product-item .action .action-item:hover .des_tag{
+    opacity: 1;
+    bottom:120%;
+}
+.body-1 .list-product .product-item .like:hover .des_tag{
+    opacity: 1;
+    bottom:120%;
+}
+.body-1 .list-product .product-item .like .des_tag{
+    width: 120px;
+    
+}
+.des_tag::before{
+    content: "";
+    position: absolute;
+    bottom:-4px;
+    z-index: -10;
+    left:50%;
+    transform:translate(-50%) rotate(45deg);
+    width:8px;
+    height: 8px;
+    background: var(--color-2);
+}
+.des_tag{
+    transition: .4s;
+    background:var(--color-2);
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    color:white;
+    padding:3px 5px;
+    bottom:50%;
+    left:50%;
+    transform:translateX(-50%);
+    font-size: 13px ;
+    opacity: 0;
+}
+
+.body-1 .list-product .product-item .list-color-product .color-item:nth-child(2){
+    background: green;
+}
+.body-1 .list-product .product-item .list-color-product .color-item:nth-child(3){
+    background: yellow;
+}
+
+
+
+/* ################  LIST-PRODUCT CSS ###################### */
+
+.body-1 .headline-list-product{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:10px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.237);
+    margin-bottom: 20px ;
+    align-items: center;
+}
+.body-1 .headline-list-product .title{
+    font-size: 25px;
+    font-weight: 600;
+    text-transform:capitalize;
+}
+.body-1 .headline-list-product .controller{
+    gap:20px;
+    display: flex;
+}
+.body-1 .headline-list-product .controller ion-icon:hover{
+    opacity: 1;
+}
+.body-1 .headline-list-product .controller ion-icon{
+    opacity: .5;
+    font-size: 20px;
+    cursor: pointer;
+}
+.body-1 .bottom-line{
+    position:relative;
+    margin-top: 20px;
+    padding-block:20px;
+    padding-left:8%;
+}
+.body-1 .bottom-line .line{
+    position: absolute;
+    width:100%;
+    height:.5px;
+    background: #66666667;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.body-1 .bottom-line a{
+    color:var(--text-color-2);
+    background: white;
+    padding-inline:10px;
+}
+
+/* ###################  PRODUCT ITEMS CSS ######################### */
+
+.list-product .action{
+    position: absolute;
+    height:85%;
+    bottom:-10px;
+    right:-5%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+.des_tag_2{
+    transition: .4s;
+    background:var(--color-2);
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    color:white;
+    padding:3px 5px;
+    top:-100%;
+    left:50%;
+    transform:translateX(-50%);
+    font-size: 13px ;
+    opacity: 0;
+}
+.body-1 .list-product .product-item .top-product:hover .action{
+    right:5%;
+    opacity: 1;
+    visibility: visible;
+}
+.list-product .action .list-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+.list-product .action .list-action .action-item{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 100rem;
+    box-shadow:  0 0 5px rgba(0, 0, 0, 0.31);
+    display: flex;
+    align-items:center;
+    justify-content: center;    
+}
+.list-product .action .list-action .view-more{
+    background: var(--color-2);
+}
+.list-product .action .list-action .add-cart{
+    background: var(--color-1);
+}
+.list-product .action .list-action .action-item ion-icon{
+    font-size: 20px;
+    color:white;
+}
+
+.list-product .product-item .like{
+    position: relative;
+}
+
+/* ########################## BODY VIEW PRODUCT ############################### */
+
+.body-view-product{
+    background: #00000098;
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    top:0;
+    z-index: 100;
+    left:0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.body-view-product.active{
+    opacity: 1;
+    visibility: visible;
+}
+.body-view-product .close-body{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    z-index:100;
+    left:0;
+
+}
+
+.body-view-product .container-view{
+    z-index: 1000;
+    position: absolute;
+    width:70vw;
+    height:80vh;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.body-view-product .container-view .left-container{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    background: white;
+    left:50%;
+    transform: translateX(-50%);
+    top:0;
+}
+
+.body-view-product .container-view .right-container{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    background: white;
+    left:50%;
+    transform: translateX(-50%);
+    top:0;
+}
+
+/* duoc active */
+.body-view-product.active .container-view .left-container{
+    overflow: hidden;
+    position: absolute;
+    width:50%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: white;
+    left:0%;
+    transform: translateX(0);
+    top:0;
+    transition-delay: .2s;
+}
+/* duoc active */
+.body-view-product.active .container-view .right-container{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    background: white;
+    left:50%;
+    transform: translateX(0);
+    top:0;
+    transition-delay: .4s;
+    overflow-y: scroll;
+
+}
+
+.body-view-product.active .container-view .left-container .controller{
+    position: absolute;
+}
+.body-view-product.active .container-view .left-container .ctrl-1{
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.body-view-product.active .container-view .left-container .ctrl-1 ion-icon{
+    font-size: 40px;
+    cursor: pointer;
+}
+.body-view-product.active .container-view .left-container .ctrl-2{
+    bottom:10px;
+    left:50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    display: flex;
+    gap:15px;
+}
+.body-view-product .container-view .left-container .slide .img-items{
+    width:100%;
+    top:0;
+    left:0;
+}
+.body-view-product.active .container-view .left-container .ctrl-2 input{
+    cursor: pointer;
+}
+.body-view-product.active .container-view .left-container .slide{
+    display: flex;
+}
+.body-view-product.active .container-view .left-container .slide .img-items{
+    flex: 1 0 100%;
+}
+.body-view-product .container-view .right-container .close{
+    position: absolute;
+    right:0;
+    top:0;
+    padding:10px;
+}
+.body-view-product .container-view .right-container .close ion-icon{
+    font-size: 40px;
+    cursor: pointer;
+    opacity: .4;
+}
+.body-view-product .container-view .right-container .close ion-icon:hover {
+    opacity: 1;
+}
+.body-view-product .container-view .right-container .info-product{
+    padding:5%;
+}
+.body-view-product .container-view .right-container .info-product .name-product{
+    font-size: 30px;
+}
+.body-view-product .container-view .right-container .info-product .top-info{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.body-view-product .container-view .right-container .info-product .evaluate{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.body-view-product .container-view .right-container .info-product .evaluate .content-evaluate{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.body-view-product .container-view .right-container .info-product .price-product{
+    color:var(--text-color-2);
+    font-size: 25px;
+    font-weight: 500;
+}
+.body-view-product .container-view .right-container .info-product .des-product{
+    font-size: 14px;
+    line-height:22px;
+    color:var(--text-color-2);
+}
+.body-view-product .container-view .right-container .info-product .to-detail{
+    text-transform: uppercase;
+    color:var(--text-color-2);
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 14px;
+}
+.body-view-product .container-view .right-container .info-product .to-detail:hover{
+    opacity: .7;
+}
+
+.body-view-product .container-view .right-container .info-product .center-info{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-block: 15px;
+}
+
+.select-color .title-color{
+    display: flex; 
+    gap:10px;
+}
+.select-color .title-color p{
+    text-transform: uppercase;
+}
+.select-color .title-color span{
+    color:blue;
+}
+.select-color .list-color-product{
+    gap:15px;
+    display: flex;
+    margin-block:10px;
+    
+}
+.select-color .color-item{
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+    cursor: pointer;
+    position: relative;
+}
+.select-color .color-item .border{
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: inherit;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10rem;
+}
+.select-color .color-item .border::before{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 10rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    z-index: 100;
+}
+.select-color .color-item:nth-child(1){
+    background: green;
+}
+.select-color .color-item:nth-child(2){
+    background: red;
+}
+.select-color .color-item:nth-child(3){
+    background: blue;
+}
+
+.body-view-product .container-view .right-container .info-product .center-info .size .title {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.body-view-product .container-view .right-container .info-product .center-info .size .title p{
+    text-transform: uppercase;
+}
+.body-view-product .container-view .right-container .info-product .center-info .size .list-size{
+    margin-top: 10px;
+    display: flex;
+    gap:15px;
+}
+.body-view-product .container-view .right-container .info-product .center-info .size .list-size .size-item{
+    cursor: pointer;
+    width:30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    color:var(--text-color-2);
+    align-items: center;
+    border: 2px solid var(--text-color-2);
+}
+.body-view-product .container-view .right-container .info-product .center-info .size .list-size .size-item.active{
+    border: 2px solid var(--color-1);
+    color:var(--color-1);
+}
+.body-view-product .container-view .right-container .info-product .center-info .size .list-size .size-item:hover{
+    border: 2px solid var(--color-1);
+    color:var(--color-1);
+}
+.body-view-product .container-view .right-container .info-product .total-price{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.body-view-product .container-view .right-container .info-product .total-price .old-price span{
+    text-decoration:line-through;
+    color:var(--text-color-2);
+}
+.body-view-product .container-view .right-container .info-product .total-price .price{
+    font-size: 20px;
+    display: flex;
+    color:var(--color-1);
+    font-weight: 600;
+    gap:5px;
+}
+.body-view-product .container-view .right-container .info-product .sale{
+    background: var(--sale);
+    color:white;
+    padding:2px 10px ;
+}
+.form-quantity{
+    user-select: none;
+    padding-right:20%;
+}
+.form-quantity .quantity{
+    display: flex;
+    justify-content: space-between;
+}
+.form-quantity .quantity .input{
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+}
+.form-quantity .quantity .input .quantity-item{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border: 1px solid #00000040;
+    width:40px;
+    font-size: 20px;
+    height: 40px;
+}
+.form-quantity .quantity .input .prve{
+    cursor: pointer;
+}
+.form-quantity .quantity .input input{
+    text-align: center;
+    outline: none;
+}
+.form-quantity .quantity .input .next{
+    cursor: pointer;
+}
+.form-quantity .quantity .btn{
+    padding-inline:30px;
+    color:white;
+    background: var(--color-1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.form-quantity .quantity .btn:hover{
+    background:rgba(0, 0, 0, 0.832);
+}
+.form-quantity .btn-confirm{
+    color:white;
+    background: black;
+    text-align: center;
+    cursor: pointer;
+    padding-block:10px;
+    margin-top: 20px ;
+    font-weight: 700;
+}
+.form-quantity .btn-confirm:hover{
+    opacity: .6;
+}
+
+.body-view-product .container-view .right-container .info-product .bottom-info{
+    margin-top:25px;
+}
+.body-view-product .container-view .right-container .info-product .bottom-info .contact-us{
+    display: flex;
+    align-items: center;
+    gap:40px;
+    margin-top: 20px;
+    font-size:15px;
+    font-weight: 600;
+    color:var(--text-color-2);
+
+}
+.body-view-product .container-view .right-container .info-product .bottom-info .list-icon{
+    display: flex;
+    gap:10px;
+}

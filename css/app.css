@@ -1,0 +1,42 @@
+
+:root{
+    --text-color-1:black ;
+    --text-color-2:#666;
+    --text-color-4:rgb(106, 106, 106) ;
+    --color-1:#F76B6A;
+    --color-2:#333;
+    --bg-banner:#ecf0f1;
+    --sale:#2ecc71;
+}
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: .25s;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+span{
+    display: inline-block;
+}
