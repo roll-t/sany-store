@@ -8,6 +8,9 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/view_product.css">
+    <link rel="stylesheet" href="./css/list-product.css">
+    <link rel="stylesheet" href="./css/headline.css">
     <title>Website quanao</title>
 </head>
 <body>
@@ -50,24 +53,59 @@
                 <nav class="menu">
                     <li class="menu-item">
                         <a href="#">Trang chủ</a>
-                        <ion-icon name="chevron-down-outline"></ion-icon>
                     </li>
                     <li class="menu-item">
                         <a href="#">Sản phẩm</a>
                         <ion-icon name="chevron-down-outline"></ion-icon>
+                        <div class="menu-level-2">
+                            <div class="menu-level-2-items">
+                                <a href="#">Áo</a>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                <div class="menu-level-3">
+                                    <div class="menu-level-3-items"><a href="#">áo thun</a></div>
+                                    <div class="menu-level-3-items"><a href="#">áo polo</a></div>
+                                    <div class="menu-level-3-items"><a href="#">áo sơ mi</a></div>
+                                </div>
+                            </div>
+                            <div class="menu-level-2-items">
+                                <a href="#">Quần</a>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                <div class="menu-level-3">
+                                    <div class="menu-level-3-items"><a href="#">quần dài</a></div>
+                                    <div class="menu-level-3-items"><a href="#">quần ngắn</a></div>
+                                </div>
+                            </div>
+                            <div class="menu-level-2-items">
+                                <a href="#">Áo khoác</a>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                <div class="menu-level-3">
+                                    <div class="menu-level-3-items"><a href="#">Hoodie</a></div>
+                                    <div class="menu-level-3-items"><a href="#">Cardigan</a></div>
+                                    <div class="menu-level-3-items"><a href="#">sweater</a></div>
+                                    <div class="menu-level-3-items"><a href="#">jacket</a></div>
+                                </div>
+                            </div>
+                            <div class="menu-level-2-items">
+                                <a href="#">phụ kiện</a>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                <div class="menu-level-3">
+                                    <div class="menu-level-3-items"><a href="#">nón</a></div>
+                                    <div class="menu-level-3-items"><a href="#">dép</a></div>
+                                    <div class="menu-level-3-items"><a href="#">túi xách</a></div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <a href="#">Bài viết</a>
-                        <ion-icon name="chevron-down-outline"></ion-icon>
                     </li>
                     <li class="menu-item">
                         <a href="#">Liên hệ</a>
-                        <ion-icon name="chevron-down-outline"></ion-icon>
                     </li>
                 </nav>
                 <div class="logo">
                     <a href="#">
-                        <img src="./img/logo.png" alt="">
+                        <img src="./img/logo/logo.png" alt="">
                     </a>
                 </div>
                 <div class="action">
@@ -86,42 +124,73 @@
                 </div>
             </div>
         </div>
+
         <div class="banner">
-            <div class="left-banner banner-item">
-                <div class="content">
-                    <h4 class="des">
-                        elessi store
-                    </h4>
-                    <h2 class="title">Autum & winter 2023</h2>
-                    <button class="btn"> show now</button>
+            <div class="slide">
+                <div class="slide-items">
+                    <div class="left-banner banner-item">
+                        <div class="content">
+                            <h4 class="des">
+                                sany store
+                            </h4>
+                            <h2 class="title">Autum & winter 2023</h2>
+                            <button class="btn"> show now</button>
+                        </div>
+                    </div>
+                    <div class="right-banner banner-item">
+                        <img src="./img/banner-home/banner-3.png" alt="" class="img">
+                    </div>
                 </div>
-            </div>
-            <div class="right-banner banner-item">
-                <div class="slide">
-                    <img src="./img/pngwing.com (1).png" alt="">
+                <div class="slide-items">
+                    <div class="left-banner banner-item">
+                        <div class="content">
+                            <h4 class="des">
+                                sany store
+                            </h4>
+                            <h2 class="title">Autum & winter 2023</h2>
+                            <button class="btn"> show now</button>
+                        </div>
+                    </div>
+                    <div class="right-banner banner-item">
+                        <img src="./img/banner-home/banner-4.png" alt="" class="img">
+                    </div>
+                </div>
+                <div class="slide-items">
+                    <div class="left-banner banner-item">
+                        <div class="content">
+                            <h4 class="des">
+                                sany store
+                            </h4>
+                            <h2 class="title">Autum & winter 2023</h2>
+                            <button class="btn"> show now</button>
+                        </div>
+                    </div>
+                    <div class="right-banner banner-item">
+                        <img src="./img/banner-home/banner-5.png" alt="" class="img">
+                    </div>
                 </div>
             </div>
             <div class="controller ctrl-1">
                 <div class="btn-prev"><ion-icon name="chevron-back-outline"></ion-icon></div>
                 <div class="btn-next"><ion-icon name="chevron-forward-outline"></ion-icon></div>
             </div>
-            <div class="controller ctrl-2">
+            <!-- <div class="controller ctrl-2">
                 <input type="radio" name="controller-header">
                 <input type="radio" name="controller-header">
                 <input type="radio" name="controller-header">
-            </div>
+            </div> -->
         </div>
     </header>
     <section class="body-1">
         <div class="left-body">
             <div class="banner">
-                <img src="./img/banner-1.jpg" alt="">
+                <img src="./img/banner-body/banner-1.png" alt="">
             </div>
         </div>
         <div class="right-body">
             <div class="headline-list-product">
                 <div class="title">
-                    Thời trang nữ
+                    Bán chạy
                 </div>
                 <div class="paging">
                     <div class="controller">
@@ -133,8 +202,8 @@
             <ul class="list-product">
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-1-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-1-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -154,7 +223,7 @@
                     <div class="content-product">
                         <h4 class="name-product">san pham 1</h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>300,000</span> <span>VND</span></p>
                             <div class="list-color-product">
                                 <div class="color-item">
                                 </div>
@@ -168,8 +237,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-2-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-2-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -189,7 +258,7 @@
                     <div class="content-product">
                         <h4 class="name-product">san pham 1</h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>350,000</span> <span>VND</span></p>
                             <div class="list-color-product">
                                 <div class="color-item">
                                 </div>
@@ -203,8 +272,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-3-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-3-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -221,10 +290,11 @@
                             <input type="hidden" value="Đăng nhập trước" class="tag-info">
                         </div>
                     </div>
+
                     <div class="content-product">
                         <h4 class="name-product">san pham 1</h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>350,000</span> <span>VND</span></p>
                             <div class="list-color-product">
                                 <div class="color-item">
                                 </div>
@@ -238,8 +308,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-4-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-4-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -259,7 +329,7 @@
                     <div class="content-product">
                         <h4 class="name-product">san pham 1</h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>350,000</span> <span>VND</span></p>
                             <div class="list-color-product">
                                 <div class="color-item">
                                 </div>
@@ -273,8 +343,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-5-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-5-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -292,24 +362,24 @@
                         </div>
                     </div>
                     <div class="content-product">
-                        <h4 class="name-product">san pham 1</h4>
+                        <h4 class="name-product">san pham 1 </h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>350,000</span> <span>VND</span></p>
                             <div class="list-color-product">
-                                <!-- <div class="color-item">
-                                </div>
                                 <div class="color-item">
                                 </div>
                                 <div class="color-item">
-                                </div> -->
+                                </div>
+                                <div class="color-item">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/ao-1.jpg" alt="" class="img img-main">
-                        <img src="./img/ao-1-2.png" alt="" class="img img-zoom">
+                        <img src="./img/product/sp-6-1.jpg" alt="" class="img img-main">
+                        <img src="./img/product/sp-6-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -329,7 +399,7 @@
                     <div class="content-product">
                         <h4 class="name-product">san pham 1</h4>
                         <div class="des-product">
-                            <p class="price-product"><span>6000000</span> <span>VND</span></p>
+                            <p class="price-product"><span>350,000</span> <span>VND</span></p>
                             <div class="list-color-product">
                                 <div class="color-item">
                                 </div>
@@ -479,4 +549,5 @@
 <script src="./js/handle_product_detail/btn.js"></script>
 <script src="./js/handle_product_detail/color.js"></script>
 <script src="./js/toggleList.js"></script>
+<script src="./js/slide/silde_header.js"></script>
 </html>
