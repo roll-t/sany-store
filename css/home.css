@@ -1,5 +1,4 @@
 /* ################ BANNER CSS ####################### */
-
 .slide-items{
     position: relative;
     height:600px;
@@ -44,12 +43,15 @@
     width: 100%;
 }
 .header .banner {
+    transition: 0s;
+    user-select: none;
     position: relative;
 }
 .header .banner .controller{
     position: absolute;
 }
 .banner .controller.ctrl-1{
+    overflow: hidden;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
@@ -57,12 +59,23 @@
     display:flex;
     justify-content: space-between;
 }
-.banner .controller.ctrl-1 ion-icon{
-    cursor: pointer;
-    font-size: 60px;
-    color:var(--text-color-2);
+.banner:hover .controller.ctrl-1 ion-icon{
     opacity: .5;
 }
+.banner .controller.ctrl-1 ion-icon{
+    cursor: pointer;
+    font-size:60px;
+    color:var(--text-color-2);
+    opacity: 0;
+}
+
+.banner .controller.ctrl-1 .btn-prev:hover{
+    transform: translateX(-10px);
+}
+.banner .controller.ctrl-1 .btn-next:hover{
+    transform: translateX(10px);
+}
+
 .banner .controller.ctrl-2{
     left:50%;
     bottom:1%;
@@ -144,9 +157,10 @@
     align-items: center;
 }
 .body-1 .headline-list-product .title{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
-    text-transform:capitalize;
+    text-transform:uppercase;
+    color:var(--text-color-3);
 }
 .body-1 .headline-list-product .controller{
     gap:20px;

@@ -26,6 +26,28 @@ class ToggleIList{
         this.valueChange.innerHTML=value
     }
 }
-const listSizeProduct=document.querySelectorAll('.size-product-view .list-size .size-item')
-const currentSize=document.querySelector('.size-product-view .title .current-size')
-const sizeToggle= new ToggleIList(listSizeProduct,currentSize);
+
+function handleToggleList(){
+    //toggle list size cho body view product
+    const listSizeProduct=document.querySelectorAll('.body-view-product .size-product-view .list-size .size-item')
+    const currentSize=document.querySelector('.body-view-product .size-product-view .title .current-size')
+    const sizeToggle= new ToggleIList(listSizeProduct,currentSize);
+
+
+    // toggle list size cho add product
+    const listProduct=document.querySelectorAll('.list-product .product-item')
+    if(listProduct.length>0){
+        const arrItems=[];
+        listProduct.forEach((items,index)=>{
+            items.addEventListener('mouseover',e=>{
+                if(!inArray(arrItems,index)){
+                    arrItems.push(index)
+                    const size=items.querySelectorAll('.size-product-view .list-size .size-item')
+                    const titleSize=items.querySelector('.size-product-view .title .current-size')
+                    const listSizeProduct=new ToggleIList(size,titleSize)
+                }
+            })
+        })
+    }
+}
+handleToggleList();

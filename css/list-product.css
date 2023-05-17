@@ -6,10 +6,18 @@
     grid-template-columns: repeat(3,1fr);
     grid-gap: 40px;
 }
+.list-product .product-item{
+    padding:1%;
+    padding-bottom:20px;
+}
+.list-product .product-item:hover{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
 .list-product .product-item .top-product{
     position:relative;
     cursor: pointer;
     height:300px;
+    overflow: hidden;
 }
 .list-product .product-item .top-product:hover .img-zoom{
     filter: blur(0);
@@ -200,4 +208,65 @@
     transform:translateX(-50%);
     font-size: 11px ;
     opacity: 0;
+}
+
+
+/* ################## XU LY THEM VAO GIO HANG ############################# */
+
+.list-product .product-item .select-add-cart{
+    position: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    bottom:-100%;
+    z-index: 200;
+    background: white;
+    overflow-y:scroll;
+    transition: .4s;
+
+}
+
+.list-product .product-item .select-add-cart.active{
+    bottom:0;
+}
+.list-product .product-item .select-add-cart .point-close{
+    position: absolute;
+    top:0;
+    right:0;
+    padding:5px;
+    font-size: 25px;
+}
+.list-product .product-item .select-add-cart .action-add-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100%;
+    gap:20px;
+    padding-block:30px;
+}
+.list-product .product-item .select-add-cart .action-add-cart .select-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    width:50%;
+}
+.list-product .product-item .select-add-cart .action-add-cart .size-product-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-product .product-item .select-add-cart .action-add-cart .form-quantity{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-product .product-item .select-add-cart .action-add-cart .form-quantity .btn-confirm{
+    padding-inline:20px;
+}
+.list-product .product-item .select-add-cart .action-add-cart .price{
+    font-size: 20px;
+    color: var(--text-color-2);
 }

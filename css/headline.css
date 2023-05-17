@@ -17,10 +17,7 @@
     gap:10px ;
     color:white;
 }
-.contact .left-contact .call .number-phone{
-    padding-bottom:2px;
-    border-bottom:.2px solid rgba(255, 255, 255, 0.32);
-}
+
 .contact .list-icon{
     gap:10px;
     display: flex;
@@ -33,12 +30,36 @@
 
 /* ################## SITE HEADER CSS ############## */
 .site-header{
-    padding-block:25px;
+    padding:25px 3%;
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-inline:3%;
 }
+.site-header.sticky{
+    position: fixed;
+    z-index: 300;
+    padding-block:20px;
+    top:0;
+    left:0;
+    width:100%;
+    background: white;
+    opacity: .9;
+    box-shadow: 3px 0 4px rgba(0, 0, 0, 0.217);
+    animation: sticky-in .5s linear;
+}
+
+.site-header.sticky:hover{
+    opacity: 1;
+}
+@keyframes sticky-in {
+    0%{
+       top:-86px;
+    }
+    100%{
+        top:0;
+    }
+}
+
 .site-header .menu{
     padding-block:10px;
     display: flex;
@@ -104,6 +125,7 @@
 }
 .site-header .action ion-icon{
     font-size: 25px;
+    cursor: pointer;
 }
 
 

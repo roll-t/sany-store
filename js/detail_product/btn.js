@@ -57,3 +57,8 @@ class HandleBtn{
 }
 const viewRigthContainer=document.querySelector('.body-view-product .right-container');
 const handleBtn=new HandleBtn(viewRigthContainer)
+const productAdd=document.querySelectorAll('.list-product .product-item .top-product')
+
+productAdd.forEach(items=>{
+    let handleBtnAddProduct=new HandleBtn(items)
+})
