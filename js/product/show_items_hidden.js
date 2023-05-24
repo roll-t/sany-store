@@ -70,7 +70,7 @@ const btnBodyView={
 const showBodyView=new ShowBodyHidden(btnBodyView.btnShow,btnBodyView.btnClose,btnBodyView.spaceClose,bodyView);
 
 //đỏng mở thêm vào giỏ hàng
-const btnShowBodyAddCart=document.querySelectorAll('.list-product .product-item .action .add-cart')
-const btnCloseBodyAddCart=document.querySelectorAll('.list-product .product-item .select-add-cart .point-close')
+// const btnShowBodyAddCart=document.querySelectorAll('.list-product .product-item .action .add-cart')
+// const btnCloseBodyAddCart=document.querySelectorAll('.list-product .product-item .select-add-cart .point-close')
 
-const showBodyAddCart=new ShowBodyHidden(btnShowBodyAddCart,btnCloseBodyAddCart)
+// const showBodyAddCart=new ShowBodyHidden(btnShowBodyAddCart,btnCloseBodyAddCart)

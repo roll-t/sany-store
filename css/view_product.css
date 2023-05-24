@@ -231,7 +231,13 @@
     position: relative;
     border:1px solid rgba(0, 0, 0, 0.13);
 }
-.select-color .color-item .border{
+.select-color .color-item.active .border{
+    opacity: 0;
+    visibility: hidden;
+}
+.select-color .color-item.active .border{
+    opacity: 1;
+    visibility: visible;
     box-sizing: border-box;
     position: absolute;
     width: 150%;
@@ -242,7 +248,7 @@
     left:50%;border: 1px solid #00000033;
     transform: translate(-50%,-50%);
 }
-.select-color .color-item .border::before{
+.select-color .color-item.active .border::before{
     content: "";
     position: absolute;
     width: 90%;

@@ -1,7 +1,6 @@
 /* ################ BANNER CSS ####################### */
 .slide-items{
     position: relative;
-    height:600px;
     overflow: hidden;
     display: flex;
     background: var(--bg-banner);
@@ -15,7 +14,7 @@
     flex-direction: column;
 }
 .header .slide-items .left-banner .content{
-    padding-left:30%;
+    padding-left:25%;
 }
 .header .slide-items .left-banner .des{
     color:var(--text-color-2);
@@ -23,11 +22,14 @@
     text-transform: uppercase;
 }
 .header .slide-items .left-banner .title{
-    padding-block:25px;
     font-size: 60px;
-    width :80%;
     text-transform:capitalize;
 }
+@media only screen and (max-width: 1050px) {
+    .header .slide-items .left-banner .content{
+        padding-left:10%;
+    }
+  }
 .header .slide-items .left-banner .btn{
     cursor: pointer;
     padding:10px 60px;

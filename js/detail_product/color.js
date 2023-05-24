@@ -28,6 +28,7 @@ class ToggleColor{
             })
         })
     }
+    
     itemRemove(){
         this.list.forEach(value=>{
             const border=value.querySelector('.border')
@@ -46,27 +47,12 @@ class ToggleColor{
         this.valueChange.style.color=arr[index].color
     }
 }
+
 function handleListColor(){
     // xu ly list color cho body view
     const colorView=document.querySelectorAll('.body-view-product .select-color .color-item')
     const currentColor=document.querySelector('.body-view-product .select-color .title-color .current-color')
     
     const toggleColor=new ToggleColor(colorView,currentColor);
-    
-    // xu ly list color cho san pham
-    const listProduct=document.querySelectorAll('.list-product .product-item')
-    if(listProduct.length>0){
-        const arrItems=[];
-        listProduct.forEach((items,index)=>{
-            items.addEventListener('mouseover',e=>{
-                if(!inArray(arrItems,index)){
-                    arrItems.push(index)
-                    const listColor=items.querySelectorAll('.select-add-cart .select-color .color-item')
-                    const titleColor=items.querySelector('.select-add-cart .select-color .title-color .current-color')
-                    const listColorProduct=new ToggleColor(listColor,titleColor)
-                }
-            })
-        })
-    }
 }
 handleListColor()

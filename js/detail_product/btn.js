@@ -55,10 +55,20 @@ class HandleBtn{
         }
     }
 }
+
+/// btn view
 const viewRigthContainer=document.querySelector('.body-view-product .right-container');
 const handleBtn=new HandleBtn(viewRigthContainer)
+///btn san pham 
 const productAdd=document.querySelectorAll('.list-product .product-item .top-product')
-
 productAdd.forEach(items=>{
     let handleBtnAddProduct=new HandleBtn(items)
 })
+///btn so luong cart items
+const quantityCartItems=document.querySelectorAll('.main-body-cart .cart-items')
+
+quantityCartItems.forEach(items=>{
+    let handleQuantityCart=new HandleBtn(items)
+})
+
+

@@ -7,6 +7,8 @@ class Slide{
             prve:document.querySelector('.banner .ctrl-1 .btn-prev')
         }
         this.wrapSlide=document.querySelector('.banner .slide')
+
+
         this.handleEvent()
         this.controllTime()
     }
@@ -23,10 +25,12 @@ class Slide{
         })
     }
     slide(){
+        
         if(this.currentBtn==1){
             const list=document.querySelectorAll(".banner .slide-items")
             this.wrapSlide.appendChild(list[0])
         }
+
         if(this.currentBtn==2){
             const list=document.querySelectorAll(".banner .slide-items")
             this.wrapSlide.prepend(list[list.length-1])
