@@ -1,16 +1,24 @@
-class Slide{
-    constructor(){
+
+//slide đơn giản ẩn hiện theo css
+class Slide_1{
+    constructor(wrap,btnNext,btnPrve,classSlideItems){
         this.currentBtn=0;
         this.ttl=0;
         this.btn={
-            next:document.querySelector('.banner .ctrl-1 .btn-next'),
-            prve:document.querySelector('.banner .ctrl-1 .btn-prev')
+            next:btnNext,
+            prve:btnPrve
         }
-        this.wrapSlide=document.querySelector('.banner .slide')
-
-
-        this.handleEvent()
-        this.controllTime()
+        if(classSlideItems){
+            this.classSlideItems=classSlideItems
+        }
+        else{
+            this.classSlideItems='.banner .slide-items'
+        }
+        if(wrap && btnNext && btnPrve){
+            this.wrapSlide=wrap
+            this.handleEvent()
+            this.controllTime()
+        }
     }
     handleEvent(){
         this.btn.next.addEventListener("click",e=>{
@@ -24,27 +32,24 @@ class Slide{
             this.slide(this.currentBtn)
         })
     }
+
     slide(){
-        
         if(this.currentBtn==1){
-            const list=document.querySelectorAll(".banner .slide-items")
+            const list=document.querySelectorAll(this.classSlideItems)
             this.wrapSlide.appendChild(list[0])
         }
-
         if(this.currentBtn==2){
-            const list=document.querySelectorAll(".banner .slide-items")
+            const list=document.querySelectorAll(this.classSlideItems)
             this.wrapSlide.prepend(list[list.length-1])
         }
     }
+
     controllTime(){
             setInterval(()=>{
                 this.ttl++;
                 if(this.ttl>=3){
                     this.btn.next.click();
-                    this.ttl=0;
                 }
-            },3000)
+            },1000)
     }
 }
-
-const slide=new Slide();

@@ -103,7 +103,7 @@
     height: 15px;
     background: rgb(255, 255, 255);
     cursor: pointer;
-    border:1px solid rgba(0, 0, 0, 0.11);
+    border:1px solid rgba(0, 0, 0, 0.091);
 }
 .list-product .product-item .list-color-product .color-item:hover .des_tag{
     opacity: 1;

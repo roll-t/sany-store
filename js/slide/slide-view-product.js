@@ -99,8 +99,8 @@ class ControllSlide{
     }
 }
 
-const controllerSlide=new ControllSlide();
-controllerSlide.handelClick()
-controllerSlide.handleInputRadio()
+// const controllerSlide=new ControllSlide();
+// controllerSlide.handelClick()
+// controllerSlide.handleInputRadio()
 
 

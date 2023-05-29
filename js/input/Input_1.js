@@ -1,11 +1,21 @@
-class HandleBtn{
-    constructor(viewRigthContainer){
+class Input_1{
+    constructor(body){
         this.current=0;
-        this.viewRigthContainer=viewRigthContainer
-        this.input={
-            next:this.viewRigthContainer.querySelector(".form-quantity .input .next"),
-            prve:this.viewRigthContainer.querySelector(".form-quantity .input .prve"),
-            number:this.viewRigthContainer.querySelector('.form-quantity .input .number')
+        this.body=body
+        this.changeClass=false
+        if(!this.changeClass){
+            this.input={
+                next:this.body.querySelector(".form-quantity .input .next"),
+                prve:this.body.querySelector(".form-quantity .input .prve"),
+                number:this.body.querySelector('.form-quantity .input .number')
+            }
+        }else{
+            const valueChang=this.changeClass(btnNext,btnPrve,inputNumber)
+            this.input={
+                next:valueChang.btnNext,
+                prve:valueChang.btnPrve,
+                number:valueChang.inputNumber
+            }
         }
         this.handleEvent();
     }
@@ -54,21 +64,12 @@ class HandleBtn{
             this.input.number.value=number
         }
     }
+    customClass(next,prve,number){
+        this.changeClass=true;
+        return {
+            next,
+            prve,
+            number
+        }
+    }
 }
-
-/// btn view
-const viewRigthContainer=document.querySelector('.body-view-product .right-container');
-const handleBtn=new HandleBtn(viewRigthContainer)
-///btn san pham 
-const productAdd=document.querySelectorAll('.list-product .product-item .top-product')
-productAdd.forEach(items=>{
-    let handleBtnAddProduct=new HandleBtn(items)
-})
-///btn so luong cart items
-const quantityCartItems=document.querySelectorAll('.main-body-cart .cart-items')
-
-quantityCartItems.forEach(items=>{
-    let handleQuantityCart=new HandleBtn(items)
-})
-
-

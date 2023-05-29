@@ -57,6 +57,7 @@
 }
 
 .body-view-product .container-view{
+    user-select: none;
     z-index: 1000;
     position: absolute;
     width:70vw;
@@ -66,7 +67,6 @@
     transform: translate(-50%, -50%);
     animation: show-view .2s linear;
 }
-
 .body-view-product .container-view .left-container{
     position: absolute;
     width:50%;
@@ -75,11 +75,12 @@
     left:50%;
     transform: translateX(-50%);
     top:0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     animation: show-view-left .3s .3s ease-in-out forwards;
-    z-index: 20;
 }
-
 .body-view-product .container-view .right-container{
     position: absolute;
     width:50%;
@@ -94,47 +95,7 @@
     border-left:1px solid rgba(0, 0, 0, 0.221);
     animation: show-view-right .3s .3s ease-in-out forwards;
 }
-/* ################# CSS BODY ########################## */
 
-.body-view-product .container-view .left-container .controller{
-    position: absolute;
-}
-.body-view-product .container-view .left-container .ctrl-1{
-    left:0;
-    top:50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    width:100%;
-}
-.body-view-product .container-view .left-container .ctrl-1 ion-icon{
-    font-size: 40px;
-    cursor: pointer;
-}
-.body-view-product .container-view .left-container .ctrl-2{
-    bottom:10px;
-    left:50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    display: flex;
-    gap:15px;
-}
-
-
-.body-view-product .container-view .left-container .slide .img-items{
-    width:100%;
-    top:0;
-    left:0;
-}
-.body-view-product .container-view .left-container .ctrl-2 input{
-    cursor: pointer;
-}
-.body-view-product .container-view .left-container .slide{
-    display: flex;
-}
-.body-view-product .container-view .left-container .slide .img-items{
-    flex: 1 0 100%;
-}
 .body-view-product .container-view .right-container .close{
     position: absolute;
     right:0;
@@ -225,34 +186,35 @@
     
 }
 .select-color .color-item{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
     position: relative;
-    border:1px solid rgba(0, 0, 0, 0.13);
+    border: 1px solid #00000019;
 }
 .select-color .color-item.active .border{
     opacity: 0;
+    transition: 0s;
     visibility: hidden;
 }
 .select-color .color-item.active .border{
     opacity: 1;
     visibility: visible;
-    box-sizing: border-box;
     position: absolute;
-    width: 150%;
-    height: 150%;
+    width: 160%;
+    height: 160%;
     background: inherit;
     z-index: -1;
     top:50%;
-    left:50%;border: 1px solid #00000033;
+    left:50%;
+    border: 1px solid #00000033;
     transform: translate(-50%,-50%);
 }
 .select-color .color-item.active .border::before{
     content: "";
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);

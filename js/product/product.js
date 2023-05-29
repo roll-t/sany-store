@@ -7,10 +7,7 @@ class Product{
         return this.listProduct[index]
     }
     //ẩn hiện 1 thẻ
-    toggleBody(body,show,btnClose,spaceClose,nameClass){
-        if(!nameClass){
-            nameClass='active'
-        }
+    toggleBody(body,show,btnClose,spaceClose,nameClass='active'){
          if(show){
              show.addEventListener('click',e=>{
                  body.classList.add(nameClass)
@@ -41,7 +38,6 @@ class Product{
         function addACtive(){
             list.forEach(items=>{
                 items.addEventListener('click',e=>{
-                    console.log(items)
                     removeActive()
                     items.classList.add(nameClass)
                 })
@@ -49,4 +45,22 @@ class Product{
         }
         addACtive()
     }
+
+    renderListColor(list,classTag,content){
+        const arrValue=[]
+        if(list.length>0){
+            const tag=document.createElement('div')
+            if(classTag){
+                tag.className=classTag
+            }
+            tag.innerHTML=content
+            arrValue.push(tag)
+        }
+        return arrValue;
+    }
+
+    changValue(wrap,value){
+        wrap.innerHTML=value
+    }
+
 }

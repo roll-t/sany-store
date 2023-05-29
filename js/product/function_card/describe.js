@@ -18,7 +18,7 @@ function handleTag(){
             if(listColor!=null){
                 renderTag(listColor,color);
             }
-            renderTag(like,'Đăng nhập trước !');
+            // renderTag(like,'Đăng nhập trước !');
         }
         })
     })
