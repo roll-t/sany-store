@@ -109,6 +109,9 @@
     align-items: center;
     position: relative;
 }
+.body-cart .main-body-cart .list-product-cart .cart-items.active{
+    opacity: 1;
+}
 .body-cart .main-body-cart .list-product-cart .cart-items .check-confirm{
     position: absolute;
     top:0;

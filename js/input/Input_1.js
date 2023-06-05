@@ -1,5 +1,5 @@
 class Input_1{
-    constructor(body){
+    constructor(body,action=true){
         this.current=0;
         this.body=body
         this.changeClass=false
@@ -17,7 +17,9 @@ class Input_1{
                 number:valueChang.inputNumber
             }
         }
-        this.handleEvent();
+        if(action){
+            this.handleEvent();
+        }
     }
     handleEvent(){
         this.input.next.addEventListener('click',e=>{

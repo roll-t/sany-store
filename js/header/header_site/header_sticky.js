@@ -11,7 +11,7 @@ class SticKyHeader{
         window.addEventListener('scroll',e=>{
             if(window.pageYOffset >this.space){
                 this.stickyIn()
-            }else{
+            }else{  
                 this.stickyOut()
             }
         })

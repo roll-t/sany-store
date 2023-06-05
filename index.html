@@ -188,10 +188,10 @@
                         <span class="cart-title">Giỏ Hàng</span>
                         <ion-icon name="close-outline"></ion-icon>
                     </div>
-                    <div class="total-price"><div class="total">Tổng tiền: </div> <p>300,000</p><span>VND</span></div>
+                    <div class="total-price"><div class="total">Tổng tiền: </div> <p class="sum-price">0</p><span>VND</span></div>
                 </div> 
                 <div class="list-product-cart">
-                    <div class="cart-items">
+                    <!-- <div class="cart-items">
                         <div class="left-cart-items">
                             <img src="./img/product/sp-1-1.jpg" alt="" class="img">
                         </div>
@@ -314,38 +314,7 @@
                             </div>
                         </div>
                         <input type="checkbox" class="check-confirm">
-                    </div>
-                    <div class="cart-items">
-                        <div class="left-cart-items">
-                            <img src="./img/product/sp-1-1.jpg" alt="" class="img">
-                        </div>
-                        <div class="right-cart-items">
-                            <div class="top">
-                                <div class="name-product">
-                                    san pham 1
-                                </div>
-                                <div class="close"><ion-icon name="close-outline"></ion-icon></div>
-                            </div>
-                            <div class="center">
-                                <p>Size: </p><span>XL</span>
-                            </div>
-                            <div class="bottom">
-                                <div class="add-cart form-quantity">
-                                    <div class="quantity">
-                                        <div class="input">
-                                            <div class="prve quantity-item">-</div>
-                                            <input class="number quantity-item" value="1" min="1" type="text">
-                                            <div class="next quantity-item">+</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    <p>500,000</p><span>VND</span>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="checkbox" class="check-confirm">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="checkout">
                     <a href="#">
@@ -427,7 +396,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -447,7 +416,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>300,000</span> <span>VND</span></p>
+                                <p class="price-product"><span class="price">300000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -458,6 +427,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='0'>
                     </li>
                     <li class="product-item">
                         <div class="top-product">
@@ -508,7 +478,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -526,9 +496,9 @@
                             </div>
                         </div>
                         <div class="content-product">
-                            <h4 class="name-product">san pham 1</h4>
+                            <h4 class="name-product">san pham 2</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -539,6 +509,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='1'>
                     </li>
                     <li class="product-item">
                         <div class="top-product">
@@ -589,7 +560,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -607,9 +578,9 @@
                             </div>
                         </div>
                         <div class="content-product">
-                            <h4 class="name-product">san pham 1</h4>
+                            <h4 class="name-product">san pham 3</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -620,6 +591,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='2'>
                     </li>
                     <li class="product-item">
                         <div class="top-product">
@@ -670,7 +642,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -688,9 +660,9 @@
                             </div>
                         </div>
                         <div class="content-product">
-                            <h4 class="name-product">san pham 1</h4>
+                            <h4 class="name-product">san pham 4</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -701,6 +673,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='3'>
                     </li>
                     <li class="product-item">
                         <div class="top-product">
@@ -751,7 +724,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -771,7 +744,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1 </h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -782,6 +755,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='4'>
                     </li>
                     <li class="product-item">
                         <div class="top-product">
@@ -832,7 +806,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -852,7 +826,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -863,6 +837,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="id-product" value='5'>
                     </li>
                 </ul>
                 <div class="body-view-product">
@@ -960,7 +935,7 @@
                                     </div>
                                     <div class="total-price">
                                         <div class="old-price"><span>450,000 <span>VND</span></span></div>
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span>400000</span><span>VND</span></div>
                                         <div class="sale">-9%</div>
                                     </div>
                                     <div class="add-cart form-quantity">
@@ -1072,7 +1047,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1092,7 +1067,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>300,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>300000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1153,7 +1128,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1173,7 +1148,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1234,7 +1209,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1254,7 +1229,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1315,7 +1290,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1335,7 +1310,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1396,7 +1371,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1416,7 +1391,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1 </h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1477,7 +1452,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1497,7 +1472,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1558,7 +1533,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1578,7 +1553,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1639,7 +1614,7 @@
                                         </div>
                                     </div>
                                     <div class="total-price">
-                                        <div class="price"><span>400,000</span><span>VND</span></div>
+                                        <div class="price"><span class="price-number">400000</span><span>VND</span></div>
                                     </div>
                                     <div class="add-cart form-quantity">
                                         <div class="quantity">
@@ -1659,7 +1634,7 @@
                         <div class="content-product">
                             <h4 class="name-product">san pham 1</h4>
                             <div class="des-product">
-                                <p class="price-product"><span>350,000</span> <span>VND</span></p>
+                                <p class="price-product"><span>350000</span> <span>VND</span></p>
                                 <div class="list-color-product">
                                     <div class="color-item">
                                     </div>
@@ -1760,7 +1735,6 @@
 </body>
 <script src="./js/method.js"></script>
 <script src="./js/input/Input_1.js"></script>
-<script src="./js/slide/Slide_1.js"></script>
 <script src="./js/slide/Slide.js"></script>
 <script src="./js/product/Product.js"></script> <!--class product-->
 <script src="./js/product/cart/show.js"></script> <!--1-->
@@ -1777,6 +1751,7 @@
 <script src="./js/header/slide.js"></script>
 <script src="./js/header/header_site/header_sticky.js"></script>
 <script src="./js/header/header_site/search.js"></script>
-<script src="./js/header/header_site/cart/show.js"></script>
+<script src="./js/cart/show.js"></script>
+<script src="./js/cart/add_cart.js"></script>
 <script src="./js/slide/slide-view-product.js"></script>
 </html>

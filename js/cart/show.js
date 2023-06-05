@@ -7,6 +7,7 @@ function showCart(){
         btn:bodyCart.querySelector('.headline-cart ion-icon'),
         space:bodyCart.querySelector('.space-block')
     }
-    const showCart=new Toggle(bodyCart,btnShow,close.btn,close.space);// duoc viet trong file method
+    const showCart=new ToggleBody(bodyCart,btnShow,close.btn,close.space);// duoc viet trong file method
+    
 }
 showCart();

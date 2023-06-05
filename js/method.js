@@ -13,7 +13,7 @@ function blockElement(btn,body){
 
 // ############### class #######################
 
-class Toggle{
+class ToggleBody{
     constructor(body,show,btnClose,spaceClose,nameClass){
         this.btnShow=show
         this.body=body

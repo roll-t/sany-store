@@ -5,7 +5,8 @@ function slideBannerHome(){
         next:bannerHome.querySelector('.controller .btn-next'),
         prve:bannerHome.querySelector('.controller .btn-prev')
     }
-    const nameClass='.banner .slide .slide-items'
-    const slide=new Slide_1(wrap,btn.next,btn.prve,nameClass)
+    const listSlideItems=document.querySelectorAll('.banner .slide .slide-items')
+    const slide= new Slide()
+    slide.slideCurrent(wrap,listSlideItems,btn.next,btn.prve,true,4000)
 }
 slideBannerHome()

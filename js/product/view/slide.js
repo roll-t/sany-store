@@ -7,7 +7,7 @@ function handleSlide(){
         next:body.querySelector('.ctrl-1 .btn-next'),
         prev:body.querySelector('.ctrl-1 .btn-prve')
     }
-    slide.slideSlip(list,btn.next,btn.prev,dots)
+    slide.slideSlip(body,list,btn.next,btn.prev,dots)
     
 }
 handleSlide()
