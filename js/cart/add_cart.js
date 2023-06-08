@@ -3,19 +3,18 @@ class AddCart{
     constructor(){
         this.body=document.querySelector('.body-cart')
         this.listProduct=document.querySelectorAll('.list-product .product-item')
+        this.btnShowCart=document.querySelector('.site-header .action .cart')
         this.database=[]
         this.checkConfirm=[]
         this.setDatabase()
         this.handleDataBase()
-        this.handleCartItems()
         this.addCart()
+        this.showQuantityCart()
     }
-
     setDatabase(){  
         let data=JSON.parse(localStorage.getItem('cartValue'))
         this.database=data?data:[]
     }
-
     handleDataBase(){
         const wrapProductCart=this.body.querySelector('.list-product-cart')
         const listProduct=wrapProductCart.querySelectorAll('.cart-items')
@@ -24,11 +23,13 @@ class AddCart{
         })
         if(this.database.length>0){
             this.database.forEach((items)=>{
-                this.renderCartItems(wrapProductCart,items,true)
+                this.renderCartItems(wrapProductCart,items)
             })
         }
+        this.checkConfirm=[]
+        this.handleCartItems()
+        this.showQuantityCart()
     }
-
     getvalueProduct(wrap){
         const selectAddCart=wrap.querySelector('.select-add-cart')
         const topCart=wrap.querySelector('.top-product ')
@@ -44,7 +45,6 @@ class AddCart{
         }
         return valueProduct
     }
-
     addCart(){ 
         this.listProduct.forEach(items=>{
             const btn=items.querySelector('.btn-confirm')
@@ -57,12 +57,12 @@ class AddCart{
                 }
                 localStorage.setItem('cartValue',JSON.stringify(this.database))
                 this.handleDataBase()
-                this.handleCartItems()
+                this.btnShowCart.click()
+      
             })
         })
     }
-
-    renderCartItems(wrapList,value,database=false){
+    renderCartItems(wrapList,value){
         const wrap=document.createElement('div')
         wrap.className='cart-items'
         const content=`
@@ -98,11 +98,8 @@ class AddCart{
                     <input value='${value.id}' type="hidden" class="id-cart-items">
                 `
         wrap.innerHTML=content
-        if(database){
-            wrapList.append(wrap)
-        }
+        wrapList.append(wrap)
     }
-
     checkSameProduct(id){
         var isTrue=false
         var temp
@@ -121,7 +118,6 @@ class AddCart{
         }
         return isTrue
     }
-
     getValueProductCart(value){
         if(value){
             const valueProductCart={
@@ -131,100 +127,95 @@ class AddCart{
             return valueProductCart
         }
     }
-
     handleCartItems(){
         const listProductCart=this.body.querySelectorAll('.cart-items')
+        
         if(listProductCart.length>0){
             listProductCart.forEach((items,index)=>{
                 const btnRemove=items.querySelector('.remove-cart-items')
-                const check=items.querySelector('.check-confirm')
+                const check=items.querySelector('.check-confirm')  
                 const quantity=items.querySelector('.quantity-item.number')
+                const formInput=items.querySelector('.form-quantity')
+                const inputQuantity=new Input_1(items);
+                this.makeInput(formInput)
                 const btn={
                     next:items.querySelector('.quantity-item.next'),
                     prev:items.querySelector('.quantity-item.prve')
                 }
-                
                 btnRemove.addEventListener('click',e=>{ 
-                    items.remove()
-                   const idCart=items.querySelector('.id-cart-items').value
+                   const idCart=btnRemove.parentElement.parentElement.parentElement.querySelector('.id-cart-items').value
                    this.handleRemove(idCart)
+                   this.handleDataBase()
                    this.totalPrice()
                 })
-
                 check.addEventListener('change',e=>{
-                    const idCart=items.querySelector('.id-cart-items').value
-                    this.handleCheck(index,check.checked,idCart)
+                    const idCart=btnRemove.parentElement.parentElement.parentElement.querySelector('.id-cart-items').value
+                    let checkInput=this.handleCheck(index,check.checked,idCart)
+                    if(checkInput){
+                        this.makeInput(formInput,false)
+                    }else{
+                        this.makeInput(formInput,true)
+                    }
+                    this.showCheckOut()
                     this.totalPrice()
                 })
+
                 btn.next.addEventListener('click',e=>{
-                    const idCart=items.querySelector('.id-cart-items').value
-                    this.handleQuantity(idCart)
-                    this.totalPrice()
+                    this.handleQuantity(index,quantity.value)
                 })
                 btn.prev.addEventListener('click',e=>{
-                    const idCart=items.querySelector('.id-cart-items').value
-                    this.handleQuantity(idCart,false)
-                    this.totalPrice()
+                    this.handleQuantity(index,quantity.value)
                 })
                 quantity.addEventListener('change',e=>{
-                    const idCart=items.querySelector('.id-cart-items').value
-                    this.handleQuantity(idCart,'',quantity)
-                    this.totalPrice()
+                    this.handleQuantity(index,quantity.value)
                 })
             })
         }
     }
-
-
-    handleQuantity(id,plus=true,input=false){
-        this.database.forEach((items,index)=>{
-            if(items.id==id){
-                if(!input){
-                    let quantity=Number(this.database[index].quantity)
-                    if(plus){
-                        quantity+=1
-                    }else{
-                        if(this.database[index].quantity<=1){
-                            this.handleRemove(id)
-                            this.handleDataBase()
-                        }else{
-                            quantity-=1
-                        }
-                    }
-                    this.database[index].quantity=quantity
-                }else{
-                    if(!isNaN(input.value)){
-                        this.database[index].quantity=input.value
-                    }
-                }
+    makeInput(body,active=true){
+        if(active){
+            const wrap=document.createElement('div')
+            wrap.className='make'
+            body.append(wrap)
+        }else{
+            const make=body.querySelector('.make')
+            if(make){
+                make.remove()
             }
-        })
-        localStorage.setItem('cartValue',JSON.stringify(this.database))
+        }
     }
-
-
     handleRemove(id){
         if(id){
             this.database=this.database.filter(item=>item.id!=id)
             localStorage.setItem('cartValue',JSON.stringify(this.database))
         }
     }
-    
     handleCheck(current,check,id){
         const cartItems=this.body.querySelectorAll('.cart-items')[current]
-        let input=new Input_1(cartItems)
+        var istrue=false
         if(check){
             this.checkConfirm.push(id)
             cartItems.classList.add('active')
+            istrue=true
         }else{
             this.checkConfirm=this.checkConfirm.filter(item=>item!=id)
             cartItems.classList.remove('active')
+            istrue=false
         }
+        return istrue
     }
-
+    handleQuantity(index,value){
+        if(isNaN(value)){
+            value=1;
+        }
+        this.database[index].quantity=value
+        localStorage.setItem('cartValue',JSON.stringify(this.database))
+        this.totalPrice()
+    }
     totalPrice(){
         const arrValue=[]
         let total=0;
+        const wrapPrice=this.body.querySelector('.headline-cart .sum-price')
         this.database.forEach(items=>{
             this.checkConfirm.forEach(value=>{
                 if(items.id==value){
@@ -236,10 +227,31 @@ class AddCart{
             arrValue.forEach(items=>{
                 total+=(Number(items.price)*items.quantity)
             })
+            wrapPrice.innerHTML=total.toLocaleString('en-US')
+        }else{
+            wrapPrice.innerHTML=0
         }
-        const wrapPrice=this.body.querySelector('.headline-cart .sum-price')
-        wrapPrice.innerHTML=total.toLocaleString('en-US')
     }
+    showCheckOut(){
+        const checkOut=this.body.querySelector('.checkout')
+        if(this.checkConfirm.length>0){
+            checkOut.classList.add('active')
+        }else{
+            checkOut.classList.remove('active')
+        }
+    }
+    showQuantityCart(){
+        const quantity=this.btnShowCart.querySelector('.quantity-cart')
+        if(this.database.length>0){
+            quantity.classList.add('active')
+            quantity.innerHTML=this.database.length
+        }else{
+            quantity.classList.remove('active')
+        }
+    }
+
 }
 
 const addCart= new AddCart();
+
+

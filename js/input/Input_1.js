@@ -3,6 +3,7 @@ class Input_1{
         this.current=0;
         this.body=body
         this.changeClass=false
+        this.action=action
         if(!this.changeClass){
             this.input={
                 next:this.body.querySelector(".form-quantity .input .next"),
@@ -17,9 +18,12 @@ class Input_1{
                 number:valueChang.inputNumber
             }
         }
-        if(action){
+        if(this.action){
             this.handleEvent();
         }
+    }
+    breakInput(){
+        this.action=false
     }
     handleEvent(){
         this.input.next.addEventListener('click',e=>{

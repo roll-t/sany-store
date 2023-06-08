@@ -59,7 +59,30 @@
         top:0;
     }
 }
-
+.site-header .cart{
+    position: relative;
+}
+.site-header .cart .quantity-cart.active{
+    transform: scale(1);
+}
+.site-header .cart .quantity-cart{
+    transform: scale(0);
+    position: absolute;
+    top:3px;
+    user-select: none;
+    cursor: pointer;
+    left:-2px;
+    background: rgba(255, 0, 0, 0.827);
+    color:white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
 .site-header .menu{
     padding-block:10px;
     display: flex;
