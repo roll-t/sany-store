@@ -1,5 +1,5 @@
 function slideBannerHome(){
-    const bannerHome=document.querySelector('.header .banner')
+    const bannerHome=document.querySelector('.banner')
     const wrap=bannerHome.querySelector('.slide')
     const btn={
         next:bannerHome.querySelector('.controller .btn-next'),
