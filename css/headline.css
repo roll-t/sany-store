@@ -149,6 +149,7 @@
 }
 .site-header .action ion-icon{
     font-size: 25px;
+    color:var(--text-color-2);
     cursor: pointer;
 }
 /* ###################### SEARCH CSS ##################### */
