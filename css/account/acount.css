@@ -68,7 +68,7 @@
     bottom:0;
     z-index: 10;
     left:0;
-    background:var(--color-2);
+    background:#636e72;
 }
 
 .group-input input[placeholder]{

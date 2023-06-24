@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="./css/view_product.css">
-<link rel="stylesheet" href="./css/list_product.css">
-<link rel="stylesheet" href="./css/slide/slide-slip.css">
+<link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/home/home.css">
+<link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/slide/slide-slip.css">
+<link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/product/view_product.css">
+<link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/product/list_product.css">
 <div class="banner">
     <div class="slide">
         <div class="slide-items">
@@ -1389,6 +1390,7 @@
 <script src="./js/product/cart/color.js"></script> <!--2-->
 <script src="./js/product/cart/size.js"></script><!--3-->
 <script src="./js/product/cart/input.js"></script><!--4-->
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/cart/add_cart.js"></script>
 <script src="./js/product/function_card/sale.js"></script>
 <script src="./js/product/function_card/describe.js"></script>
 <script src="./js/product/view/show.js"></script>
@@ -1397,4 +1399,3 @@
 <script src="./js/product/view/input.js"></script>
 <script src="./js/product/view/slide.js"></script>
 <script src="./js/header/slide.js"></script>
-<script src="./js/slide/slide-view-product.js"></script>

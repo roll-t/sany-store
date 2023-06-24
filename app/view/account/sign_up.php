@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="../css/account/acount.css">
+<link rel="stylesheet" href="./css/account/acount.css">
 <div class="container banner">
     <div class="main-body">
         <h2 class="title">Đăng ký tài khoản</h2>
         <div class="form-sign-up">
-            <form onsubmit="return false" class="form-value-sign-up" method='post' action="./index?page=login">
+            <form onsubmit="return false" class="form-value-sign-up" method='post' action="./php/account/sign_up.php">
                 <div class="group-input">
                     <input type="text" name="userName" placeholder="Họ Tên" class="user-name input-signup">
                     <span class="erorr"></span>
@@ -35,11 +35,11 @@
                 </div>
                 <div class="confirm">
                     <a href="#" class="forget"></a>
-                    <input type="submit" class="confirm-sign-up" value="Đăng ký">
+                    <input type="submit" class="confirm-sign-up" name='confirmSignUp' value="Đăng ký">
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script src='../js/account/Validate.js'></script>
-<script src='../js/account/sign_up.js'></script>
+<script src='./js/account/Validate.js'></script>
+<script src='./js/account/sign_up.js'></script>

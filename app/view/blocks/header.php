@@ -100,7 +100,7 @@
                 </div>
                 <div class="action-item to-profile">
 
-                    <a href=""><ion-icon name="person-outline"></ion-icon></a>
+                    <a href="#"><ion-icon name="person-outline"></ion-icon></a>
 
                 </div>
                 <div class="action-item">
@@ -136,4 +136,3 @@
         </div>
     </div>
 </header>
-<script src="../js/account/render_link.js"></script>
