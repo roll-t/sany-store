@@ -1,6 +1,8 @@
 <?php
 class Database {
     private $__conn;
+    // kết nối database
+    use QueryBuilder;
     public function __construct() {
         global $db_configs;
         $this->__conn = Connection::getInstance($db_configs);
@@ -70,10 +72,16 @@ class Database {
     }
     
     public function query($sql) {
-        $statement = $this->__conn->prepare($sql);
-        $statement->execute();
-        
-        return $statement;
+        try{
+            $statement = $this->__conn->prepare($sql);
+            $statement->execute();
+            return $statement;
+        }catch(Exception $exception){
+            $mess=$exception->getMessage();
+            $data['mess']=$mess;
+            App::$app->loadError('database',$data);
+            die();
+        }
     }
     
     public function lastInsertId() {

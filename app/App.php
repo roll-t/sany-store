@@ -1,9 +1,12 @@
 <?php
 class App{
     private $__controller, $__action,$__params,$__routes;
+    static public $app;
+
     function __construct()
     {
         global $routes,$configs;
+        self::$app=$this;
         $this->__routes= new Routes();
         if(!empty($routes['defaultController'])){
             $this->__controller=$routes['defaultController'];
@@ -88,7 +91,8 @@ class App{
     }
 
 
-    function loadError($name='404'){
+    function loadError($name='404',$data=[]){
+        extract($data);
         require_once 'errors/'.$name.'.php'; 
     }
 }

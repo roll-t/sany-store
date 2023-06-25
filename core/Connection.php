@@ -14,7 +14,9 @@ class Connection{
             $con=new PDO($dsn,$config['user'],"",$options);
             self::$conn=$con;
         }catch (Exception $exception){
-            $mess =$exception->getMessage();
+            echo '<h1>Kết nối thất bại:</h1>';
+            echo '</br>';
+            $mess=$exception->getMessage();
             die($mess);
         }
     }

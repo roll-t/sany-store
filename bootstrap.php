@@ -31,13 +31,9 @@ if(!empty($configs['database'])){
     $db_configs=array_filter($configs['database']);
     if(!empty($db_configs)){
         require_once 'core/Connection.php';
+        require_once 'core/QueryBuilder.php';
         require_once 'core/Database.php';
-        $conn=Connection::getInstance($db_configs);
         $db=new Database();
-        $query=$db->query('SELECT * FROM KHACH_HANG')->fetchAll(PDO::FETCH_ASSOC);
-        // echo '<pre>';
-        // print_r($query);
-        // echo '<pre>';;
     }
 }
 require_once 'core/Model.php';// load base model    

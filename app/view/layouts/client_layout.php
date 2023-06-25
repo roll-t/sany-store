@@ -11,11 +11,6 @@
         <?php 
         $this->view('blocks/header');
         $this->view($content,$sub_content);
-        if(!empty($sub_content['list_client'])){
-            foreach ($sub_content['list_client'] as $value){
-                var_dump($value['kh_taiKhoan']);
-            }
-        }
         $this->view('blocks/footer');
         ?>
     </body>
