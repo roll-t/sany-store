@@ -1,6 +1,6 @@
 <?php
 class App{
-    private $__controller, $__action,$__params,$__routes;
+    private $__controller, $__action,$__params,$__routes,$__db;
     static public $app;
 
     function __construct()
@@ -15,6 +15,13 @@ class App{
         }
         $this->__action='index';
         $this->__params=[];
+
+        // link db thông qua base controller
+        if (class_exists('DB')){
+            $db_obj=new DB();
+            $this->__db = $db_obj->db;
+        }
+        
         $this->handleUrl();
     }
     function getUrl(){
@@ -68,6 +75,9 @@ class App{
             if(class_exists($this->__controller)){
                 $this->__controller = new $this->__controller;
                 unset($urlArr[0]);
+                if(!empty($this->__db)){
+                    $this->__controller->db=$this->__db;
+                }
             }else{
                 $this->loadError();
             }

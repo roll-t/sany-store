@@ -1,4 +1,6 @@
 <?php
+
+
 $routes['defaultController']='home'; 
 $routes['index.php']='home';
 $routes['san-pham']='product/index';

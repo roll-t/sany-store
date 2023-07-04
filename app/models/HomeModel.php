@@ -16,13 +16,14 @@ class HomeModel extends Model{
         $data=$this->db->query("SELECT * FROM $this->__table")->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
-    public function getListClient(){
-       $data= $this->db->table('khach_hang')->where('kh_id','<',20)->select('kh_id, kh_sdt')->getValue();
-       return $data;
-    }
 
-    public function getDetail($id){
-        $data=$this->db->table('khach_hang')->whereLike('kh_taiKhoan','%3%')->first();
-        return $data;
+    public function insertUesr($data){
+        $this->db->table('khach_hang')->insert($data);
+    }
+    public function updateData($data,$id){
+        $this->db->table('khach_hang')->where('kh_id','=',$id)->update($data);
+    }
+    public function deleteUser($id){
+        $this->db->table('khach_hang')->where('kh_id','=',$id)->delete();
     }
 }

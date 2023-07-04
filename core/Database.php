@@ -7,7 +7,7 @@ class Database {
         global $db_configs;
         $this->__conn = Connection::getInstance($db_configs);
     }
-    public function insert($table, $data) {
+    public function insert_db($table, $data) {
         if (!empty($data)) {
             $fieldStr = '';
             $valueStr = '';
@@ -29,7 +29,7 @@ class Database {
         return false;
     }
     
-    public function update($table, $data, $condition = '') {
+    public function update_db($table, $data, $condition = '') {
         if (!empty($data)) {
             $updateStr = '';
             
@@ -44,9 +44,7 @@ class Database {
             } else {
                 $sql = "UPDATE $table SET $updateStr";
             }
-            
             $status = $this->query($sql);
-            
             if ($status) {
                 return true;
             }
@@ -55,7 +53,7 @@ class Database {
         return false;
     }
     
-    public function delete($table, $condition = '') {
+    public function delete_db($table, $condition = '') {
         if (!empty($condition)) {
             $sql = "DELETE FROM $table WHERE $condition";
         } else {
@@ -72,14 +70,18 @@ class Database {
     }
     
     public function query($sql) {
-        try{
-            $statement = $this->__conn->prepare($sql);
-            $statement->execute();
-            return $statement;
-        }catch(Exception $exception){
-            $mess=$exception->getMessage();
-            $data['mess']=$mess;
-            App::$app->loadError('database',$data);
+        try {
+            if($this->__conn!=NULL){
+                $statement = $this->__conn->prepare($sql);
+                $statement->execute();
+                return $statement;
+            }else{
+                App::$app->loadError('database', ['mess'=>'viet them doan $this->db->table()']);
+            }
+        } catch (Exception $exception) {
+            $mess = $exception->getMessage();
+            $data['mess'] = $mess;
+            App::$app->loadError('database', $data);
             die();
         }
     }

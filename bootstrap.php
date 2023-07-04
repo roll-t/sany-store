@@ -26,6 +26,7 @@ if(!empty($configs_dir)){
 
 // require_once 'configs/routes.php';
 require_once 'core/Routes.php';//load routes
+require_once 'core/Session.php';//load session
 require_once 'app/App.php';//load app
 if(!empty($configs['database'])){
     $db_configs=array_filter($configs['database']);
@@ -33,8 +34,26 @@ if(!empty($configs['database'])){
         require_once 'core/Connection.php';
         require_once 'core/QueryBuilder.php';
         require_once 'core/Database.php';
+        require_once 'core/DB.php';
         $db=new Database();
     }
 }
+// load core Helper co san trong he thong
+
+require 'core/Helper.php';
+
+//load all helper coder tu viet
+$configs_dir_helper=scandir('app/helper');
+if(!empty($configs_dir_helper)){
+    foreach ($configs_dir_helper as $key=>$value){
+        if($value!='.' && $value!='..' && file_exists('app/helper/'.$value)){
+            require_once 'app/helper/'.$value;
+        }
+    }
+}
+
+
 require_once 'core/Model.php';// load base model    
 require_once 'core/Controller.php';// load base controler
+require_once 'core/Request.php';// load request POST/GET
+require_once 'core/Response.php';// load request POST/GET
