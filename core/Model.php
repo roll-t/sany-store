@@ -13,13 +13,17 @@ abstract class Model extends Database{
     abstract function tableFill();
     abstract function fiedFill(); 
     abstract function primaryKey();
-    function all(){
+    function all($table=''){
         $tableName=$this->tableFill();
         $fiedSelect=$this->fiedFill();
         if(empty($fiedSelect)){
             $fiedSelect='*';
         }
-        $sql="SELECT $fiedSelect FROM $tableName";
+        if(!empty($table)){
+            $sql="SELECT $fiedSelect FROM $table";
+        }else{
+            $sql="SELECT $fiedSelect FROM $tableName";
+        }
         $query=$this->db->query($sql);
         if(!empty($query)){
             return $query->fetchAll(PDO::FETCH_ASSOC);
@@ -41,6 +45,14 @@ abstract class Model extends Database{
             return $query->fetch(PDO::FETCH_ASSOC);
         }else{
             return false;
+        }
+    }
+
+    function check($data){
+        if($data){
+            return $data;
+        }else{
+            return $data;
         }
     }
 

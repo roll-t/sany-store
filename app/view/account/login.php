@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/account/acount.css">
+<link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/account/acount.css">
 <div class="container banner">
     <div class="main-body">
         <h2 class="title">Đăng Nhập</h2>
@@ -32,5 +32,5 @@
     </div>
 </div>
 
-<script src='./js/account/Validate.js'></script>
-<script src='./js/account/login.js'></script>
+<script src='<?php echo _WEB_ROOT?>/public/assets/client/js/account/Validate.js'></script>
+<script src='<?php echo _WEB_ROOT?>/public/assets/client/js/account/login.js'></script>

@@ -35,7 +35,7 @@
         <div class="site-header ">
             <nav class="menu">
                 <li class="menu-item">
-                    <a href="../index.php?page?home">Trang chủ</a>
+                    <a href="#">Trang chủ</a>
                 </li>
                 <li class="menu-item">
                     <a href="#">Sản phẩm</a>
@@ -87,8 +87,8 @@
                 </li>
             </nav>
             <div class="logo">
-                <a href="../index.php?page=home">
-                    <img src="./img/logo/logo.png" alt="">
+                <a href="">
+                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/logo/logo.png" alt="">
                 </a>
             </div>
             <div class="action">

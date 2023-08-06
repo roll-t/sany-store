@@ -7,7 +7,10 @@
     }
 </style>
 <?php
-echo old('fullName')
+ HtmlHelper::formOpen('post',_WEB_ROOT.'/home/index');
+ HtmlHelper::input('submit','confirm');
+ HtmlHelper::formClose();
+
 ?>
 <form action="<?php echo _WEB_ROOT;?>/home/post_user" method="post">
     <div style="display:flex;flex-direction: column;gap:10px;align-items:center;">

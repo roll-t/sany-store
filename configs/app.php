@@ -1,3 +1,16 @@
 <?php
-$configs['app']=[];
+$configs['app']=[
+    'service'=>[
+        HtmlHelper::class
+    ],
+    'routesMiddleWare'=>[
+         'san-pham'=>AuthMiddleWare::class
+    ],
+    'globalMiddleWare'=>[
+        ParamsMiddleWare::class
+    ],
+    'boot'=>[
+        AddServiceProvider::class
+    ]
+];
 ?>

@@ -8,11 +8,13 @@ trait QueryBuilder{
     public $orderBy='';
     public $innerJoin='';
     public $count=false;
+
     public function table($tableName){
         $this->tableName=$tableName;
         return $this;
     }
 
+    
     public function where($field,$compare,$value){
         if(empty($this->where)){
             $this->operator='WHERE';
@@ -48,7 +50,9 @@ trait QueryBuilder{
         $this->where.= "$this->operator $field LIKE '$value'";
         return $this;
     }
-
+    // 50 
+    // 0, 10 ;
+    // 10, 10 ;
     public function limit($number,$offset=0){
         $this->limit="LIMIT $offset, $number ";
         return $this;
@@ -112,6 +116,7 @@ trait QueryBuilder{
             return false;
         }
     }
+    // select * or '' form  'table' where id = 1....;
     public function first(){
         $sqlQuey="SELECT $this->selectField FROM $this->tableName $this->where $this->limit";
         $query=$this->query($sqlQuey);

@@ -7,11 +7,6 @@ class Home extends Controller{
         $this->modelHome=$this->model('HomeModel');
     }
     public function index(){
-        $title='trang chu';
-        // doi voi nhung cau lenh sql don gian co the goi sql truc tiep ben model base
-        // neu hong thich thi goi ben model thong thuong cung duoc
-        // $this->data['sub_content']['list_client']=$this->modelHome->getList();//model qua xu ly
-
         $updateData=[
             'kh_ten'=>'pham phuoc school ',
             'kh_taiKhoan'=>'truong_03',
@@ -19,23 +14,25 @@ class Home extends Controller{
             'kh_mail'=>'truong@gamil.com',
             'kh_sdt'=>'0812608562'
         ];
-        // $check= $this->db->table('khach_hang')->where('kh_id','=',45)->update($updateData);
-
-        $this->db->table('khach_hang')->insert($updateData);
-        // $this->modelHome->deleteUser(39);
-        $this->data['sub_content']['title']=$title;
+        
         $this->data['content']='home/home';
         $this->view('layouts/client_layout',$this->data);
     }
+
     function get_user(){
         // ley loi tu session roi hien ra giao dien xong xoa session
         $request= new Request();
         $this->data['msg']=Session::flash('msg');
-        // lay tu helper/function
-        // echo toSlug('pham phuoc truong');
         $this->view('request/add',$this->data);
-
+       
     }
+
+
+
+
+
+
+
 
     function post_user(){
         $request= new Request();

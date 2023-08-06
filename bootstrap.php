@@ -14,7 +14,6 @@ $web_root=$web_root.'/'.$folder;
 define('_WEB_ROOT',$web_root);
 
 // tu dong load configs
-
 $configs_dir=scandir('configs');
 if(!empty($configs_dir)){
     foreach ($configs_dir as $key=>$value){
@@ -23,11 +22,36 @@ if(!empty($configs_dir)){
         }
     }
 }
+//load all serveices
+// global
+if(!empty($configs['app']['service'])){
+    $allServices=$configs['app']['service'];
+    if(!empty($allServices)){
+        foreach($allServices as $items){
+            if(file_exists('app/core/'.$items.'.php')){
+                require_once 'app/core/'.$items.'.php';
+            }
+        }
+    }
+}
+
+//load service provider class
+require_once 'core/ServiceProvider.php';
+
+// load view class
+require_once 'core/View.php';
+
+// require laod model middleWare 
+require_once 'core/Load.php';
+
+// MiddleWares
+require_once 'core/MiddleWares.php';
 
 // require_once 'configs/routes.php';
 require_once 'core/Routes.php';//load routes
+
 require_once 'core/Session.php';//load session
-require_once 'app/App.php';//load app
+
 if(!empty($configs['database'])){
     $db_configs=array_filter($configs['database']);
     if(!empty($db_configs)){
@@ -42,6 +66,8 @@ if(!empty($configs['database'])){
 
 require 'core/Helper.php';
 
+require_once 'app/App.php';//load app
+
 //load all helper coder tu viet
 $configs_dir_helper=scandir('app/helper');
 if(!empty($configs_dir_helper)){
@@ -53,7 +79,13 @@ if(!empty($configs_dir_helper)){
 }
 
 
+
 require_once 'core/Model.php';// load base model    
+
+require_once 'core/Template.php';//load template engine
+
 require_once 'core/Controller.php';// load base controler
+
 require_once 'core/Request.php';// load request POST/GET
+
 require_once 'core/Response.php';// load request POST/GET

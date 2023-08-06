@@ -12,7 +12,7 @@ class Connection {
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ];
-
+            
             // Khởi tạo kết nối PDO
             $this->conn = new PDO($dsn, $config['user'],"", $options);
         } catch (Exception $exception) {

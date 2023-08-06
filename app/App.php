@@ -1,11 +1,12 @@
 <?php
 class App{
+    
     private $__controller, $__action,$__params,$__routes,$__db;
     static public $app;
-
+    public $titlePage;
     function __construct()
     {
-        global $routes,$configs;
+        global $routes,$titlePage;
         self::$app=$this;
         $this->__routes= new Routes();
         if(!empty($routes['defaultController'])){
@@ -21,9 +22,10 @@ class App{
             $db_obj=new DB();
             $this->__db = $db_obj->db;
         }
-        
         $this->handleUrl();
+  
     }
+    
     function getUrl(){
         if(!empty($_SERVER['PATH_INFO'])){
             $url=$_SERVER['PATH_INFO'];
@@ -33,14 +35,33 @@ class App{
         return $url;
     }
 
+
+
+
     function handleUrl(){
+
         $url= $this->getUrl();
+
         $url= $this->__routes->handleRoutes($url);
 
+        $this->titlePage= $this->__routes->getTitlePage();
+
+        // load middleWare app
+
+        $this->handleRouteMiddleWare($this->__routes->getKeyRoute(),$this->__db);
+
+        $this->handleGlobalMiddleWare($this->__db);
+
+        // load service proviceder app
+
+        $this->handleAppServiceProvider($this->__db);
+
         $urlArr=array_filter(explode('/',$url));
+        
         $urlArr=array_values($urlArr);
 
         $urlCheck='';
+
         if(!empty($urlArr)){
             foreach ($urlArr as $key=>$value){
                $urlCheck.=$value.'/';
@@ -100,6 +121,63 @@ class App{
         }
     }
 
+    function handleRouteMiddleWare($routeKey='',$db){
+        $routeKey=trim($routeKey);
+        //middleWare app
+        global $configs;
+        if(!empty($configs['app']['routesMiddleWare'])){
+            $routeMiddleWareArr=$configs['app']['routesMiddleWare'];
+            foreach($routeMiddleWareArr as $key=>$items){
+                if(file_exists('app/middleWare/'.$items.'.php') && $routeKey==trim($key)){
+                    require_once 'app/middleWare/'.$items.'.php';
+                    if(class_exists($items)){
+                        $middleWareObj=new $items();
+                        if(!empty($db)){
+                            $middleWareObj->db=$db;                 
+                        }
+                        $middleWareObj->handle();
+                    }
+                }
+            }
+        }
+    }
+    function handleGlobalMiddleWare($db){
+        global $configs;
+        if(!empty($configs['app']['globalMiddleWare'])){
+            $globalMiddleWareArr=$configs['app']['globalMiddleWare'];
+            foreach($globalMiddleWareArr as $items){
+                if(file_exists('app/middleWare/'.$items.'.php') ){
+                    require_once 'app/middleWare/'.$items.'.php';
+                    if(class_exists($items)){
+                        $middleWareObj=new $items();
+                        if(!empty($db)){
+                            $middleWareObj->db=$db;
+                        }
+                        $middleWareObj->handle();
+                    }
+                }
+            }
+        }
+    }
+
+    public function handleAppServiceProvider($db=''){
+        global $configs;
+        if(!empty($configs['app']['boot'])){
+            $serviceProviderArr=$configs['app']['boot'];
+            foreach($serviceProviderArr as $items){
+                if(file_exists('app/core/'.$items.'.php') ){
+                    require_once 'app/core/'.$items.'.php';
+                    if(class_exists($items)){
+                        $serviceObj=new $items();
+                        if(!empty($db)){
+                            $serviceObj->db =$db;
+                        }
+                        $serviceObj->boot();
+                    }
+                }
+            }
+        }
+    }
 
     function loadError($name='404',$data=[]){
         extract($data);

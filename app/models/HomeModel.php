@@ -20,6 +20,7 @@ class HomeModel extends Model{
     public function insertUesr($data){
         $this->db->table('khach_hang')->insert($data);
     }
+    
     public function updateData($data,$id){
         $this->db->table('khach_hang')->where('kh_id','=',$id)->update($data);
     }

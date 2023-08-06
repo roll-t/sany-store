@@ -9,4 +9,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link rel="shortcut icon" href="../img/logo/icon-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo _WEB_ROOT?>/public/assets/client/img/logo/icon-logo.png" type="image/x-icon">
+ 
+    <title><?php echo !empty($title) ? $title : 'không tiêu đề' ?></title

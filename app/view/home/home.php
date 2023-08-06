@@ -1,7 +1,9 @@
+
 <link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/home/home.css">
 <link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/slide/slide-slip.css">
 <link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/product/view_product.css">
 <link rel="stylesheet" href="<?php echo _WEB_ROOT?>/public/assets/client/css/product/list_product.css">
+
 <div class="banner">
     <div class="slide">
         <div class="slide-items">
@@ -15,7 +17,7 @@
                 </div>
             </div>
             <div class="right-banner banner-item">
-                <img src="./img/banner-header/banner-3.png" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-header/banner-3.png" alt="" class="img">
             </div>
         </div>
         <div class="slide-items">
@@ -29,7 +31,7 @@
                 </div>
             </div>
             <div class="right-banner banner-item">
-                <img src="./img/banner-header/banner-4.png" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-header/banner-4.png" alt="" class="img">
             </div>
         </div>
         <div class="slide-items">
@@ -43,7 +45,7 @@
                 </div>
             </div>
             <div class="right-banner banner-item">
-                <img src="./img/banner-header/banner-5.png" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-header/banner-5.png" alt="" class="img">
             </div>
         </div>
     </div>
@@ -56,7 +58,7 @@
     <section class="body-1">
         <div class="left-body">
             <div class="banner">
-                <img src="./img/banner-body/banner-1.png" alt="">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-body/banner-1.png" alt="">
             </div>
             <div class="btn-see-more">
                 xem thêm
@@ -78,8 +80,8 @@
             <ul class="list-product">
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-1-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-1-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-1-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-1-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -159,8 +161,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-2-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-2-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-2-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-2-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -241,8 +243,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-3-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-3-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-3-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-3-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -323,8 +325,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-4-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-4-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-4-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-4-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -405,8 +407,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-5-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-5-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-5-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-5-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -487,8 +489,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-6-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-6-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -575,22 +577,22 @@
                         <div class="slide-slip">
                             <div class="slide-wrap">
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-1.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-1.jpg" alt="">
                                 </div>
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-2.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-2.jpg" alt="">
                                 </div>
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-3.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-3.jpg" alt="">
                                 </div>
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-4.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-4.jpg" alt="">
                                 </div>
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-5.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-5.jpg" alt="">
                                 </div>
                                 <div class="slide-slip-items">
-                                    <img src="./img/product/product-2/img-1-6.jpg" alt="">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/product-2/img-1-6.jpg" alt="">
                                 </div>
                             </div>
                             <div class="controller ctrl-1">
@@ -685,7 +687,7 @@
                             </div>
                             <div class="bottom-info">
                                 <div class="pay">
-                                    <img src="./img/product-details/img.png" alt="" class="img">
+                                    <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product-details/img.png" alt="" class="img">
                                 </div>
                                 <div class="contact-us">
                                     <div class="text">Share: </div>
@@ -712,13 +714,13 @@
         <div class="title">bộ sưu tập</div>
         <div class="list-collection">
             <div class="collection-items">
-                <img src="./img/banner-body/banner-2.png" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-body/banner-2.png" alt="" class="img">
             </div>
             <div class="collection-items">
-                <img src="./img/banner-body/banner-3.jpeg" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-body/banner-3.jpeg" alt="" class="img">
             </div>
             <div class="collection-items">
-                <img src="./img/banner-body/banner-4.jpg" alt="" class="img">
+                <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/banner-body/banner-4.jpg" alt="" class="img">
             </div>
         </div>
     </section>
@@ -730,8 +732,8 @@
             <ul class="list-product">
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-1-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-1-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-1-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-1-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -811,8 +813,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-2-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-2-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-2-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-2-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -892,8 +894,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-3-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-3-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-3-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-3-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -974,8 +976,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-4-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-4-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-4-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-4-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -1055,8 +1057,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-5-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-5-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-5-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-5-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -1136,8 +1138,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-6-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-6-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -1217,8 +1219,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-6-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-6-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -1298,8 +1300,8 @@
                 </li>
                 <li class="product-item">
                     <div class="top-product">
-                        <img src="./img/product/sp-6-1.jpg" alt="" class="img img-main">
-                        <img src="./img/product/sp-6-2.jpg" alt="" class="img img-zoom">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-1.jpg" alt="" class="img img-main">
+                        <img src="<?php echo _WEB_ROOT?>/public/assets/client/img/product/sp-6-2.jpg" alt="" class="img img-zoom">
                         <div class="action">
                             <div class="list-action">
                                 <div class="action-item view-more">
@@ -1385,17 +1387,17 @@
         </div>
     </section>
 </div>
-<script src="./js/product/Product.js"></script>
-<script src="./js/product/cart/show.js"></script> <!--1-->
-<script src="./js/product/cart/color.js"></script> <!--2-->
-<script src="./js/product/cart/size.js"></script><!--3-->
-<script src="./js/product/cart/input.js"></script><!--4-->
-<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/cart/add_cart.js"></script>
-<script src="./js/product/function_card/sale.js"></script>
-<script src="./js/product/function_card/describe.js"></script>
-<script src="./js/product/view/show.js"></script>
-<script src="./js/product/view/color.js"></script>
-<script src="./js/product/view/size.js"></script>
-<script src="./js/product/view/input.js"></script>
-<script src="./js/product/view/slide.js"></script>
-<script src="./js/header/slide.js"></script>
+
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/Product.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/cart/show.js"></script> <!--1-->
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/cart/color.js"></script> <!--2-->
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/cart/size.js"></script><!--3-->
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/cart/input.js"></script><!--4-->
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/function_card/sale.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/function_card/describe.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/view/show.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/view/color.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/view/size.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/view/input.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/product/view/slide.js"></script>
+<script src="<?php echo _WEB_ROOT?>/public/assets/client/js/header/slide.js"></script>
